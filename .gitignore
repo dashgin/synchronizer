@@ -110,3 +110,5 @@ crashlytics-build.properties
 # Custom
 Pipfile.lock
 poetry.lock
+data/credentials.json
+data/data.db
