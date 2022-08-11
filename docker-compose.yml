@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  synchronizer:
+    build:
+      context: .
+      dockerfile: ./docker-images/python3.9-alpine3.13.dockerfile
+    image: synchronizer
+    container_name: synchronizer
+    # environment:
+      # - GOOGLE_APPLICATION_CREDENTIALS=path/to/credentials.json
+      # - LOCAL_FOLDER_PATH=path/to/local/folder
+      # - GOOGLE_DRIVE_FOLDER=folder_id
+      # - DATABASE_PATH=path/to/database
+    volumes:
+      - ./data:/app/data
+      - ./local_folder:/app/local_folder:ro
